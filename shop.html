@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=EB+Garamond:400|Karla:400,700,400i,700i">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Shop — Chels</title>
+</head>
+<body>
+
+  <!-- Header Section -->
+
+  <header class="header"></header>
+
+  <main>
+    <section class="products-container container">
+      <nav class="categories">
+        <span class="categories__link" id="all">All</span>
+        <span class="categories__link" id="accessories">Accessories</span>
+        <span class="categories__link" id="bottoms">Bottoms</span>
+        <span class="categories__link" id="dresses">Dresses + Jumpsuits</span>
+        <span class="categories__link" id="outwear">Outerwear</span>
+        <span class="categories__link" id="tops">Tops</span>
+        <span class="categories__link" id="sale">— Sale</span>
+      </nav>
+      <div class="products">
+        <!-- <a href="haorijacket.html" class="shop-item">
+          <span class="shop-item__sale">Sale</span>
+          <img src=img/haori-jacket.jpg alt="Jacket" class="shop-item__img">
+          <div class="quickview">
+            <span class="quickview__icon">Quick View</span>
+            <span class="quickview__info">$Haori Jacket
+              <br>
+              <span class="quickview__price">$210.00<span class="quickview__price--sale">$150.00<span></span>
+            </span>
+            <span class="clothing-index">${index}</span>
+          </div>
+        </a> -->
+      </div>
+    </section>
+
+    <!-- Popup Shop Item -->
+
+    <div class="overlay">
+      <div class="popup-btn popup-btn--prev" id="popupPrev">
+        <img src="img/arrow-btn.png" alt="Previous button" class="popup-btn__icon">
+      </div>
+      <div class="popup-item">
+        <div class="clothing-item-flex">
+          <div class="clothing-item-flex__img-wrapper">
+            <img src="" alt="Clothing item" class="clothing-item-flex__img zoom-normal" id="clothingImg">
+          </div>
+          <div class="product-info">
+            <h2 class="heading-secondary" id="clothingName"></h2>
+            <span class="product-info__price" id="clothingPrice"></span>
+            <span class="product-info__price product-info__price--sale" id="clothingSale"></span>
+            <p class="product-info__text">Sed ornare tellus non lectus blandit faucibus. Curabitur convallis nibh ut libero lobortis ullamcorper. Aliquam ornare risus in orci iaculis egestas. Vivamus varius ipsum eu leo ...</p>
+            <div class="detail-group">
+              <p class="detail-group__span">Size:</p>
+              <select class="detail-group__size">
+                <option value="">Select Size</option>
+                <option value="0">0</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+              </select>
+            </div>
+            <div class="detail-group">
+              <p class="detail-group__span">Quantity:</p>
+              <input class="detail-group__quantity" max="9999" min="1" value="1" type="number">
+            </div>
+              <button type="button" class="btn btn--form btn--form--shop btn-add">Add to cart</button>
+              <a href="" class="btn-view" id="clothingLink">View Full Item</a>
+          </div>
+        </div>
+        <span class="popup__close-icon-clothing" id="closeIcon">&times;</span>
+      </div>
+      <div class="popup-btn" id="popupNext">
+        <img src="img/arrow-btn.png" alt="Next button" class="popup-btn__icon">
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+
+  <footer class="footer"></footer>
+
+  <!-- Script -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

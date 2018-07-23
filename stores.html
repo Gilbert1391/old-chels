@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=EB+Garamond:400|Karla:400,700,400i,700i">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Stores — Chels</title>
+</head>
+<body>
+
+  <!-- Header Section -->
+
+  <header class="header"></header>
+
+  <main>
+    <section class="footer-page">
+      <div id="newYork" class="map"></div>
+      <h2 class="heading-secondary heading-secondary--stock">New York</h2>
+      <div class="stores-flex">
+        <p>777 Broadway<br>New York, NY 00000</p>
+        <p>placeholder@example.com<br>+1 555 867 5309</p>
+        <p>Mon – Fri : 11a – 7p<br>Sat – Sun : 12p – 6p</p>
+      </div>
+      <div id="london" class="map"></div>
+      <h2 class="heading-secondary heading-secondary--stock">London</h2>
+      <div class="stores-flex">
+        <p>20 Wigmore St<br>London, UK</p>
+        <p>placeholder@example.com<br>+44 20 5555 5555</p>
+        <p>Mon – Sat : 11a – 7p<br>Sundays : Closed</p>
+      </div>
+      <div id="tokyo" class="map"></div>
+      <h2 class="heading-secondary heading-secondary--stock">Tokio</h2>
+      <div class="stores-flex">
+        <p>8 Chome-24-2 Sendagaya<br>Tokyo, JP</p>
+        <p>placeholder@example.com<br>+81 03 5555 5555</p>
+        <p>Mon – Fri : 11a – 7p<br>Sat – Sun : 12p – 6p</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+
+  <footer class="footer"></footer>
+
+  <!-- Script -->
+
+  <script>
+    function initMap() {
+      // Map stylesheet
+      var styles = [
+        {
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#bdbdbd"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#dadada"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c9c9c9"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        }
+      ]
+
+      // Map options
+      var options = {
+        zoom: 12,
+        styles: styles
+      }
+
+      // Locations
+      var newYork = {lat: 40.731969, lng: -73.988987};
+      var london = {lat: 51.51677, lng: -0.14731};
+      var tokyo = {lat: 35.682839, lng: 139.759455};
+
+      // Maps and marker functions
+      function mapNY() {
+        var map = new google.maps.Map(document.getElementById('newYork'), {options, center: newYork});
+        var marker = new google.maps.Marker({
+          position: newYork,
+          map: map
+        });
+
+        // Open window when marker is clicked
+        google.maps.event.addListener(marker, 'click', function () {
+         window.open('https://www.google.com/maps?sll=40.731376,-73.991778&q=777+Broadway+Ave+New+York,+NY,+United+States&z=12', '_blank');
+        });
+      }
+      mapNY();
+
+      function mapLondon() {
+        var map = new google.maps.Map(document.getElementById('london'), {options, center: london});
+        var marker = new google.maps.Marker({
+          position: london,
+          map: map
+        });
+
+        // Open window when marker is clicked
+        google.maps.event.addListener(marker, 'click', function () {
+         window.open('https://www.google.com/maps?sll=51.516735,-0.147408&q=20+Wigmore+Street+London,+W1U+2RQ,+United+Kingdom&z=14', '_blank');
+        });
+      }
+      mapLondon();
+
+      function mapTokyo() {
+        var map = new google.maps.Map(document.getElementById('tokyo'), {options, center: tokyo});
+        var marker = new google.maps.Marker({
+          position: tokyo,
+          map: map
+        });
+
+        // Open window when marker is clicked
+        google.maps.event.addListener(marker, 'click', function () {
+         window.open('https://www.google.com/maps?sll=35.678844,139.706515&q=8+Chome-24-2+Sendagaya+Tokyo,+Japan&z=16', '_blank');
+        });
+      }
+      mapTokyo();
+    }
+    </script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaOZopYoAkcFsmFSKCxw1iPdHB86uc2dc&callback=initMap"
+    async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

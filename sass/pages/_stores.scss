@@ -1,0 +1,35 @@
+// Stores
+.map {
+  height: 40.1rem;
+  margin-bottom: 2rem;
+  // filter: grayscale(1);
+}
+
+.stores-flex {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  color: $color-gray-dark;
+  letter-spacing: .1rem;
+  margin-bottom: 9rem;
+}
+
+
+// Stocklists
+.stock-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stock-item {
+  font-size: 1.8rem;
+  color: $color-gray-dark;
+  letter-spacing: .1rem;
+
+  &, p {
+    padding: 1rem 0;
+  }
+}
+
+// AIzaSyAaOZopYoAkcFsmFSKCxw1iPdHB86uc2dc

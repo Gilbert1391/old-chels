@@ -1,0 +1,27 @@
+.social {
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+
+  &--left {
+    justify-content: flex-start;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &, span {
+    cursor: pointer;
+  }
+}

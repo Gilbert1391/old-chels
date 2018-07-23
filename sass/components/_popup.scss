@@ -1,0 +1,65 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(245, 239, 236, 0.80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  @include transition;
+
+  &__img {
+    height: 95%;
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    color: $color-gray;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      color: $color-gray-dark;
+    }
+  }
+
+  &__close-icon-clothing {
+    position: absolute;
+    font-size: 3.6rem;
+    font-weight: lighter;
+    color: #222;
+    top: -1rem;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.overlay{
+  position: fixed;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(240,240,240,.6);
+}
+
+.popup-item {
+  width: 75%;
+  height: 150vh;
+  background-color: $color-white;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,121 @@
+.container {
+  padding:  4rem 5rem !important;
+}
+
+.container-big {
+  padding: 17rem 7rem !important;
+}
+
+.blog-content {
+  padding: 10rem 5rem;
+}
+
+.footer-page {
+  padding: 8rem 5rem;
+}
+
+.header {
+  width: 100%;
+}
+
+.header-home {
+  width: 100%;
+  position: absolute;
+}
+
+.navigation {
+  display: flex;
+  align-items: baseline;
+  color: $color-white;
+
+  &__logo {
+    color: inherit;
+    font-size: 2.7rem;
+    letter-spacing: .6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__left {
+    margin-right: auto;
+  }
+
+  &__right{
+    margin-left: auto;
+  }
+
+  &__link {
+    color: inherit;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .13rem;
+    @include transition;
+
+    &:not(:last-child) {
+      margin-right: .6rem;
+    }
+
+    &:hover {
+      color: rgba(205, 195, 192, 0.82);
+    }
+  }
+}
+
+.navigation-black {
+  color: $color-font;
+}
+
+.categories {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+
+  &__link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: rgba(34,34,34,.7);
+    padding: .5rem 0;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      color: rgba(34,34,34,.4);
+    }
+  }
+}
+
+.footer {
+  padding: 10rem 5rem;
+  background-color: $color-gray-light;
+}
+
+.footer-nav {
+  display: flex;
+
+  &__group {
+    width: 16rem;
+    padding: 2rem;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: .65rem;
+
+    &:hover {
+      @include transition;
+      color: rgba(34,34,34,.5)
+    }
+  }
+}

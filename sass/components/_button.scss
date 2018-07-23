@@ -1,0 +1,107 @@
+.btn {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  padding: 1.2rem 2.6rem;
+  border: 2px solid $color-white;
+  color: $color-white;
+  text-decoration: none;
+  outline: none;
+  @include transition;
+
+  &:hover {
+    color: #222;
+    background-color: $color-white;
+  }
+
+  &--form {
+    color: #222;
+    border: 2px solid black;
+    font-weight: 400;
+    padding: 1.4rem 3.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-white;
+      background-color: #222;
+    }
+
+    &--shop {
+      padding: 2.3rem 3.4rem;
+    }
+  }
+
+  &--big {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1.8rem 3.2rem;
+    border: 2px solid #222;
+    color: #222;
+
+    &:hover {
+      color: $color-white;
+      background-color: #222;
+    }
+  }
+}
+
+.btn-anchor {
+  color: $color-gray;
+  font-size: 1.8rem;
+  text-decoration: none;
+  @include border-bottom;
+}
+
+.btn-blog-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-blog {
+ display: inline-block;
+ padding: 1rem;
+ color: $color-font;
+ text-decoration: none;
+ letter-spacing: .1rem;
+
+  &__label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+}
+
+.btn-view {
+  display: block;
+  width: 10.5rem;
+  margin-top: 4rem;
+  font-size: 1.4rem;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  color: $color-gray-dark;
+  border-bottom: 1px solid rgba(162,162,162,.7);
+}
+
+.popup-btn {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  right: 9%;
+  cursor: pointer;
+
+  &--prev {
+    transform: rotate(180deg);
+    left: 9%;
+  }
+
+  &__icon {
+    height: 100%;
+  }
+}

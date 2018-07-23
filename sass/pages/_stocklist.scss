@@ -1,0 +1,14 @@
+.stock-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stock-item {
+  font-size: 1.8rem;
+  color: $color-gray-dark;
+  letter-spacing: .1rem;
+
+  &, p {
+    padding: 1rem 0;
+  }
+}
